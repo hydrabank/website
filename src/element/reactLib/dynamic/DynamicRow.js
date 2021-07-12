@@ -6,7 +6,9 @@ import { faCodeBranch } from "@fortawesome/free-solid-svg-icons";
 function DynamicRow() {
     return (
         <div className="DynamicRow">
-            <DynamicItem type="music" icon={faSpotify} style={{ color: "#1DD05D" }} />
+            <a href="https://www.last.fm/user/Dannnington">
+                <DynamicItem type="music" icon={faSpotify} style={{ color: "#1DD05D" }} />
+            </a>
             <DynamicItem type="development" icon={faCodeBranch} style={{ color: "#22A7F2" }} />
         </div>
     );
