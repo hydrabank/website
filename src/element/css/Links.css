@@ -1,0 +1,18 @@
+.Links {
+    display: flex;
+}
+
+.DynamicRow {
+    display: flex;
+    margin-top: 1%;
+}
+
+.LinksMember {
+    flex: 33.33%;
+    padding-left: 12px;
+    padding-right: 12px;
+}
+
+.LinksColour {
+    color: white;
+}
