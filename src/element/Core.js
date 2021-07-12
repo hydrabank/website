@@ -1,5 +1,5 @@
 import './css/Core.css';
-import ProfilePhoto from "./reactLib/api/Avatar";
+import ProfilePhoto from "./reactLib/dynamic/Avatar";
 import LinksRow from "./reactLib/links/Row";
 import DynamicRow from "./reactLib/dynamic/DynamicRow";
 function Core() {
