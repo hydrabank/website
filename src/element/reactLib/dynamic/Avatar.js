@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import "../../css/Avatar.css";
 
 function ApiAvatar() {
-    const [avatarURL, setAvatarURL] = useState("/kylar2.png");
+    const [avatarURL, setAvatarURL] = useState("/kylar3.png");
     const [hex, setHex] = useState("747F8D");
     const [status, setStatus] = useState("Offline on Discord");
     useEffect(function () {

@@ -9,8 +9,9 @@ function Core() {
     <h2 className="Name">Daniel Hyders</h2>
     <h3 className="Tagline">
       Software engineer,
-      web & UI designer,
-      systems administrator
+      UI designer,
+      systems administrator,
+      data analyst
     </h3>
     <LinksRow />
     <DynamicRow />
