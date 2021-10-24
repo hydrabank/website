@@ -17,20 +17,20 @@ function DynamicItem(props) {
             err = true;
         });
         if (err === true) return;
-        let codeStr = "(Stopped coding)";
+        let codeStr = "(stopped coding)";
 
         if (request.response.code.file == null) setHidden(true);
         if (request.response.code.file !== null) {
             setHidden(false);
             if (request.response.code.workspace === null) {
-                if (request.response.code.file === "Idling") codeStr = "(Visual Studio Code) Idling";
+                if (request.response.code.file === "Idling") codeStr = "(visual studio code) idling";
                 else {
-                    codeStr = `(Visual Studio Code) Editing ${request.response.code.file}`;
+                    codeStr = `(visual studio code) editing ${request.response.code.file}`;
                 };
             } else {
-                if (request.response.code.file === "Idling") codeStr = "(Visual Studio Code) Idling";
+                if (request.response.code.file === "Idling") codeStr = "(visual studio code) idling";
                 else {
-                    codeStr = `(Visual Studio Code) Editing ${request.response.code.file} in project ${request.response.code.workspace}`;
+                    codeStr = `(visual studio code) editing ${request.response.code.file} in project ${request.response.code.workspace}`;
                 };
             };
         };
@@ -44,12 +44,12 @@ function DynamicItem(props) {
             err = true;
         });
         if (err === true) return;
-        let music = "(Stopped listening to Spotify)";
+        let music = "(stopped listening to Spotify)";
 
         if (request.response.listening === null) setHidden(true);
         if (request.response.listening === true) {
             setHidden(false);
-            music = `(Spotify / Last.fm) ${request.response.title} by ${request.response.artist}`
+            music = `(spotify / last.fm) ${request.response.title} by ${request.response.artist}`
         };
         setStatus(music);
     };

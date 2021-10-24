@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import "../../css/Avatar.css";
 
+let ColourBorder = false;
+
 function ApiAvatar() {
     const [avatarURL, setAvatarURL] = useState("/kylar3.png");
     const [hex, setHex] = useState("747F8D");
@@ -10,7 +12,13 @@ function ApiAvatar() {
         getAvatar();
     }, []);
 
+    // No longer used, however it's still here if you'd like to enable it otherwise.
+    // Just toggle the ColourBorder boolean at the top of the page to enable it.
     async function getStatus() {
+        if (ColourBorder === false) {
+            setStatus(null);
+            return setHex("00000000");
+        };
         let err = false;
         const request = await fetch("https://api.bean.codes/internal/danny/status").then(r => r.json()).catch(e => {
             err = true;
