@@ -1,39 +1,31 @@
 import './css/Core.css';
-import ProfilePhoto from "./reactLib/dynamic/Avatar";
-import LinksRow from "./reactLib/links/Row";
-import DynamicRow from "./reactLib/dynamic/DynamicRow";
 import Background from "./reactLib/Background";
 import Skills from "./reactLib/sections/Skills";
 import Contact from './reactLib/sections/Contact';
-
-import Pulse from "react-reveal/Pulse";
+import Home from "./reactLib/sections/Home";
+import HomeButton from './reactLib/componentry/HomeButton';
 import { Element } from 'react-scroll';
 
+import { BrowserRouter as Router, Routes as Switch, Route, NavLink } from "react-router-dom";
+
 function Core() {
- return (
-   <div className="Core">
-    <Element name="top"></Element>
-    <Background />
-      <div className="TopComponentry">
-        <ProfilePhoto />
-          <Pulse>
-          <div className="TopComponentry-NoMargin">
-            <h2 className="Name">danny</h2>
-            <h3 className="Tagline">
-              software engineer,
-              systems administrator,
-              UI designer
-            </h3>
-            <LinksRow />
-            <DynamicRow />
-          </div>
-          </Pulse>
-      </div>
-    <Skills />
-    <Contact />
-    <br />
-   </div>
- );
+  return (
+    <div className="Core">
+      <Router>
+        <HomeButton />
+        <Element name="top" />
+        <Background />
+        <div className="PageContent">
+          <Switch>
+            <Route exact path="/" element={<Home />} />
+            <Route path="/skills" element={<Skills />} />
+            <Route path="/contact" element={<Contact />} />
+          </Switch>
+        </div>
+      </Router>
+      <br />
+    </div>
+  );
 }
 
 export default Core;

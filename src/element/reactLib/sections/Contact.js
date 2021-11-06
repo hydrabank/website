@@ -9,7 +9,7 @@ function Contact() {
         <Zoom bottom>
             <div className="Contact-Section">
                 <h1 className="Title">contact</h1>
-                <h2 className="Subtitle">need to enquire about a commission? have a question that you've been dying to ask? just want to say hello? click the button below to be sent to the top of the page, where you can find all of my socials!</h2>
+                <h2 className="Subtitle">Need to enquire about a commission? Have a question that you've been dying to ask? Just want to say hello? Click the button below to be sent to the top of the page, where you can find all of my socials!</h2>
                 <Link to="top" smooth={true} duration={500} data-tip="Return to top">
                     <a href="/#" style={{color: "white"}}>
                         <FontAwesomeIcon icon={faArrowAltCircleUp} style={{marginBottom: "50%"}} size="2x" />
