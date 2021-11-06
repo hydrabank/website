@@ -6,7 +6,7 @@ import Home from "./reactLib/sections/Home";
 import HomeButton from './reactLib/componentry/HomeButton';
 import { Element } from 'react-scroll';
 
-import { BrowserRouter as Router, Routes as Switch, Route, NavLink } from "react-router-dom";
+import { BrowserRouter as Router, Routes as Switch, Route } from "react-router-dom";
 
 function Core() {
   return (
