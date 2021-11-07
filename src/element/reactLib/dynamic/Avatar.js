@@ -22,7 +22,7 @@ function ApiAvatar() {
             return setHex("00000000");
         };
         let err = false;
-        const request = await fetch("https://api.bean.codes/internal/danny/status").then(r => r.json()).catch(e => {
+        const request = await fetch("https://api.danny.works/internal/danny/status").then(r => r.json()).catch(e => {
             err = true;
         });
         if (err === true) return;
@@ -45,7 +45,7 @@ function ApiAvatar() {
     async function getAvatar() {
         if (EnableDiscordPulledAvatar === false) return console.log("Discord-sourced avatar not enabled, returning..");
         let err = false;
-        const request = await fetch("https://api.bean.codes/internal/danny/avatar").then(r => r.json()).catch(e => {
+        const request = await fetch("https://api.danny.works/internal/danny/avatar").then(r => r.json()).catch(e => {
             err = true;
         });
         if (err === true) return;

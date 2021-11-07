@@ -13,7 +13,7 @@ function DynamicItem(props) {
     async function getDevelopment() {
         if (type !== "development") return;
         let err = false;
-        const request = await fetch("https://api.bean.codes/internal/danny/status").then(res => res.json()).catch(e => {
+        const request = await fetch("https://api.danny.works/internal/danny/status").then(res => res.json()).catch(e => {
             err = true;
         });
         if (err === true) return;
@@ -40,7 +40,7 @@ function DynamicItem(props) {
     async function getMusic() {
         if (type !== "music") return;
         let err = false;
-        const request = await fetch("https://api.bean.codes/internal/danny/spotify").then(res => res.json()).catch(e => {
+        const request = await fetch("https://api.danny.works/internal/danny/spotify").then(res => res.json()).catch(e => {
             err = true;
         });
         if (err === true) return;
