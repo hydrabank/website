@@ -16,22 +16,22 @@ export default function Home() {
                 <h2 className="Tagline">Software engineer, cybersecurity analyst</h2>
                 <div className="flex gap-x-6">
                     <Tooltip title="GitHub" placement="top">
-                        <a aria target="_blank" rel="noreferrer noopener" href="https://github.com/Dannnington">
+                        <a target="_blank" rel="noreferrer noopener" href="https://github.com/Dannnington">
                                 <FontAwesomeIcon size="2x" icon={faGithub} color="white" />
                         </a>
                     </Tooltip>
                     <Tooltip title="Discord" placement="top">
-                        <a aria target="_blank" rel="noreferrer noopener" href="https://discords.com/bio/p/dannington">
+                        <a  target="_blank" rel="noreferrer noopener" href="https://discords.com/bio/p/dannington">
                             <FontAwesomeIcon size="2x" icon={faDiscord} color="white" />
                         </a>
                     </Tooltip>
                     <Tooltip title="Email" placement="top">
-                        <a aria target="_blank" rel="noreferrer noopener" href="mailto:hello@danny.works">
+                        <a  target="_blank" rel="noreferrer noopener" href="mailto:hello@danny.works">
                                 <FontAwesomeIcon size="2x" icon={faMailBulk} color="white" />
                         </a>
                     </Tooltip>
                     <Tooltip title="Last.fm" placement="top">
-                        <a aria target="_blank" rel="noreferrer noopener" href="https://last.fm/user/Dannnington">
+                        <a  target="_blank" rel="noreferrer noopener" href="https://last.fm/user/Dannnington">
                                 <FontAwesomeIcon size="2x" icon={faLastfm} color="white" />
                         </a>
                     </Tooltip>

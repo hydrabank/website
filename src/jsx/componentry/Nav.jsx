@@ -2,12 +2,13 @@
 
 import { Disclosure } from '@headlessui/react';
 import { MenuIcon, XIcon } from '@heroicons/react/outline';
+import { useLocation } from 'react-router-dom';
 
 const navigation = [
   { name: 'Home', href: '/', current: true },
   { name: 'Resume', href: '/resume.pdf', current: false, disabled: false, external: true },
-  { name: 'Projects', href: '#', current: false, disabled: true },
-  { name: 'Contact', href: '#', current: false, disabled: true },
+  { name: 'Projects', href: '/projects', current: false, disabled: true },
+  { name: 'Contact', href: '/contact', current: false, disabled: true },
 ];
 
 function classNames(...classes) {
@@ -15,6 +16,7 @@ function classNames(...classes) {
 };
 
 export default function Nav() {
+  const route = useLocation();
   return (
     <Disclosure as="nav" className="bg-gray-800 shadow-lg">
       {({ open }) => (
@@ -40,9 +42,9 @@ export default function Nav() {
                     {navigation.map((item) => (
                       <a
                         key={item.name}
-                        href={item.disabled ? "#" : item.href}
-                        rel={item.external ? "noreferrer noopener" : "noreferrer noopener"}
-                        target={item.external ? "_blank" : "_self"}
+                        href={item.disabled ? route.pathname : item.href}
+                        rel="noreferrer noopener"
+                        target={item.external ? "_blank" : null}
                         className={classNames(
                           item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
                           'px-3 py-2 rounded-md text-sm font-medium font-BreezeText'
@@ -65,9 +67,9 @@ export default function Nav() {
                 <Disclosure.Button
                   key={item.name}
                   as="a"
-                  href={item.disabled ? "#" : item.href}
-                  rel={item.external ? "noreferrer noopener" : "noreferrer noopener"}
-                  target={item.external ? "_blank" : "_self"}
+                  href={item.disabled ? route.pathname : item.href}
+                  rel="noreferrer noopener"
+                  target={item.external ? "_blank" : null}
                   className={classNames(
                     item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
                     'block px-3 py-2 rounded-md text-base text-center font-medium font-BreezeText'
