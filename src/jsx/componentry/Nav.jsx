@@ -1,0 +1,87 @@
+// NavBar component is derived from Tailwind UI library (https://tailwindui.com/)
+
+import { Disclosure } from '@headlessui/react';
+import { MenuIcon, XIcon } from '@heroicons/react/outline';
+
+const navigation = [
+  { name: 'Home', href: '/', current: true },
+  { name: 'Resume', href: '/resume.pdf', current: false, disabled: false, external: true },
+  { name: 'Projects', href: '#', current: false, disabled: true },
+  { name: 'Contact', href: '#', current: false, disabled: true },
+];
+
+function classNames(...classes) {
+  return classes.filter(Boolean).join(' ')
+};
+
+export default function Nav() {
+  return (
+    <Disclosure as="nav" className="bg-gray-800 shadow-lg">
+      {({ open }) => (
+        <>
+          <div className="max-w-7xl mx-auto sm:px-6 lg:px-8 px-12">
+            <div className="relative flex items-center justify-between h-16">
+              <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
+                <Disclosure.Button className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
+                  <span className="sr-only">Menu</span>
+                  {open ? (
+                    <XIcon className="block h-6 w-6" aria-hidden="true" />
+                  ) : (
+                    <MenuIcon className="block h-6 w-6" aria-hidden="true" />
+                  )}
+                </Disclosure.Button>
+              </div>
+              <div className="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
+                <div className="flex-shrink-0 flex items-center">
+                  <a href="/" className="text-white text-xl font-BreezeHeader font-bold">Danny</a>
+                </div>
+                <div className="hidden sm:block sm:ml-6">
+                  <div className="flex space-x-4">
+                    {navigation.map((item) => (
+                      <a
+                        key={item.name}
+                        href={item.disabled ? "#" : item.href}
+                        rel={item.external ? "noreferrer noopener" : "noreferrer noopener"}
+                        target={item.external ? "_blank" : "_self"}
+                        className={classNames(
+                          item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
+                          'px-3 py-2 rounded-md text-sm font-medium font-BreezeText'
+                        )}
+                        style={item.disabled ? { cursor: "not-allowed" } : {}}
+                        aria-current={item.current ? 'page' : undefined}
+                      >
+                        {item.name}
+                      </a>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <Disclosure.Panel className="sm:hidden">
+            <div className="px-2 pt-2 pb-3 space-y-1">
+              {navigation.map((item) => (
+                <Disclosure.Button
+                  key={item.name}
+                  as="a"
+                  href={item.disabled ? "#" : item.href}
+                  rel={item.external ? "noreferrer noopener" : "noreferrer noopener"}
+                  target={item.external ? "_blank" : "_self"}
+                  className={classNames(
+                    item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
+                    'block px-3 py-2 rounded-md text-base text-center font-medium font-BreezeText'
+                  )}
+                  style={item.disabled ? { pointerEvents: 'none' } : {}}
+                  aria-current={item.current ? 'page' : undefined}
+                >
+                  {item.name}
+                </Disclosure.Button>
+              ))}
+            </div>
+          </Disclosure.Panel>
+        </>
+      )}
+    </Disclosure>
+  )
+}
