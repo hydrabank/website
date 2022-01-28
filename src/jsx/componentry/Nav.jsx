@@ -9,7 +9,7 @@ import ConfigurationFetch from "../../lib/ConfigurationFetch.js";
 const navigation = [
   { name: 'Home', href: '/', current: false },
   { name: 'Resume', href: '/Resume.pdf', current: false, disabled: false, external: true },
-  { name: 'Projects', href: '/projects', current: false, disabled: true },
+  { name: 'Projects', href: '/projects', current: false, disabled: false },
   { name: 'Contact', href: '/contact', current: false, disabled: true },
 ];
 

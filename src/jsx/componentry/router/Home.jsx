@@ -7,22 +7,40 @@ import ConfigurationFetch from "../../../lib/ConfigurationFetch.js";
 
 export default function Home() {
     const [spotifyString, setSpotifyString] = useState("Not listening");
+    const [discordString, setDiscordString] = useState("Offline");
     const [lastFmStyle, setLastFmStyle] = useState({ color: "white" });
+    const [discordStyle, setDiscordStyle] = useState({ color: "white" });
 
     useEffect(() => {
-        const executableSpotifyFunction = async () => {
+        const executableAPIFunction = async () => {
             const configuration = await ConfigurationFetch();
             fetch(configuration.api.basePath + "/internal/danny/spotify").then(response => response.json()).then(data => {
-                console.log(`Spotify Data (${new Date().toUTCString()}):`);
-                console.log(data);
                 setSpotifyString(data.response.listening ? `${data.response.title} by ${data.response.artist}` : "Not listening");
                 setLastFmStyle(data.response.listening ? { color: "D51007" } : { color: "white" });
             }).catch(error => {
-                console.error("Error fetching Spotify:", error);
+                console.error("Error fetching Spotify data:", error);
+            });
+
+            fetch(configuration.api.basePath + "/internal/danny/status").then(response => response.json()).then(data => {
+                if (data.response.general.type === "dnd") {
+                    setDiscordString("Do not disturb");
+                    setDiscordStyle({ color: "ED4245" });
+                } else if (data.response.general.type === "idle") {
+                    setDiscordString("Idle");
+                    setDiscordStyle({ color: "FEE75C" });
+                } else if (data.response.general.type === "online") {
+                    setDiscordString("Online");
+                    setDiscordStyle({ color: "57F287" });
+                } else {
+                    setDiscordString("Offline");
+                    setDiscordStyle({ color: "white" });
+                };
+            }).catch(error => {
+                console.error("Error fetching status data:", error);
             });
         };
-        const interval = setInterval(executableSpotifyFunction, 5000);
-        executableSpotifyFunction();
+        const interval = setInterval(executableAPIFunction, 5000);
+        executableAPIFunction();
         
 
             return () => clearInterval(interval);
@@ -49,9 +67,9 @@ export default function Home() {
                             <FontAwesomeIcon size="2x" icon={faGithub} color="white" />
                         </a>
                     </Tooltip>
-                    <Tooltip title="Discord" placement="top">
+                    <Tooltip title={`Discord: ${discordString}`} placement="top">
                         <a target="_blank" rel="noreferrer noopener" href="https://discords.com/bio/p/dannington">
-                            <FontAwesomeIcon size="2x" icon={faDiscord} color="white" />
+                            <FontAwesomeIcon size="2x" icon={faDiscord} style={discordStyle} />
                         </a>
                     </Tooltip>
                     <Tooltip title={`Last.fm: ${spotifyString}`} placement="top">
