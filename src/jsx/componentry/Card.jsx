@@ -31,19 +31,30 @@ function ProjectCard(props) {
     
         useEffect(() => {
             processedChildren.forEach(child => { 
-                console.log(child) 
-                if (child.type.displayName === "Title") {
-                    if (title === "") setTitle(child.props.children);
-                } else if (child.type.displayName === "Description") {
-                    if (description === "") setDescription(child.props.children);
-                } else if (child.type.displayName === "Image") {
-                    if (image === "") setImage(child.props.children);
-                } else if (child.type.displayName === "Link") {
-                    if (link === "") setLink(child.props.children);
-                } else if (child.type.displayName === "ImageDescription") {
-                    if (imageDescription === "") setImageDescription(child.props.children);
-                } else if (child.type.displayName === "ButtonText") {
-                    if (buttonText === "") setButtonText(child.props.children);
+                switch (child.type.displayName) {
+                    case "Title":
+                        if (title === "") setTitle(child.props.children);
+                        break;
+                    
+                    case "Description":
+                        if (description === "") setDescription(child.props.children);
+                        break;
+                    
+                    case "Image":
+                        if (image === "") setImage(child.props.children);
+                        break;
+
+                    case "Link":
+                        if (link === "") setLink(child.props.children);
+                        break;
+
+                    case "ImageDescription":
+                        if (imageDescription === "") setImageDescription(child.props.children);
+                        break;
+
+                    case "ButtonText":
+                        if (buttonText === "") setButtonText(child.props.children);
+                        break;
                 };
             });
         });
