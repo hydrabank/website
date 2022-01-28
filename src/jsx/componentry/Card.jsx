@@ -21,7 +21,7 @@ const ButtonText = () => null;
 ButtonText.displayName = "ButtonText";
 
 function ProjectCard(props) {
-    var [processedChildren, setProcessedChildren] = useState(typeof props.children.splice !== "function" ? [props.children] : props.children);
+    var [processedChildren] = useState(typeof props.children.splice !== "function" ? [props.children] : props.children);
     var [title, setTitle] = useState("");
     var [description, setDescription] = useState("");
     var [image, setImage] = useState("");
@@ -46,7 +46,7 @@ function ProjectCard(props) {
                     if (buttonText === "") setButtonText(child.props.children);
                 };
             });
-        }, [processedChildren]);
+        });
         
     return (
         <div>
