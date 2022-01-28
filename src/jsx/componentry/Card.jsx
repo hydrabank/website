@@ -55,6 +55,10 @@ function ProjectCard(props) {
                     case "ButtonText":
                         if (buttonText === "") setButtonText(child.props.children);
                         break;
+
+                    default:
+                        console.log("Default")
+                        break;
                 };
             });
         });
