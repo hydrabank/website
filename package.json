@@ -1,6 +1,6 @@
 {
   "name": "danny.works",
-  "version": "9.0.0-beta3",
+  "version": "9.0.0",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.7.1",

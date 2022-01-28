@@ -1,4 +1,4 @@
-# bean.codes v9
+# danny.works v9
 
 Version 9 of [danny.works](https://www.danny.works). Created with React and Tailwind, based on create-react-app.
 
