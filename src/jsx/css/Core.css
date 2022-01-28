@@ -1,13 +1,13 @@
 .Header {
-  @apply text-black dark:text-white font-bold text-4xl font-BreezeHeader px-5;
+  @apply text-white font-bold text-4xl font-BreezeHeader px-5;
 }
 
 .Text {
-  @apply text-black dark:text-white text-2xl font-BreezeText px-12;
+  @apply text-white text-2xl font-BreezeText px-12;
 }
 
 .Tagline {
-  @apply text-black dark:text-white text-2xl font-BreezeText px-12 italic text-center;
+  @apply text-white text-2xl font-BreezeText px-12 italic text-center;
 }
 
 
