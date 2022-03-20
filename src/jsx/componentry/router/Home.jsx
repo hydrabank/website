@@ -41,9 +41,8 @@ export default function Home() {
         };
         const interval = setInterval(executableAPIFunction, 5000);
         executableAPIFunction();
-        
 
-            return () => clearInterval(interval);
+        return () => clearInterval(interval);
     }, []);
 
     return (
@@ -53,7 +52,7 @@ export default function Home() {
                 <h1 className="PageBanner" style={{ zIndex: "1" }}>Home</h1>
             </div>
             <div className="flex gap-y-6 flex-col py-6 h-screen items-center bg-gray-900">
-                <img src="/assets/img/icon2.gif" alt="My icon" className="w-64 h-64 mt-12 bg-gray-800" style={{ borderRadius: "50%" }} />
+                <img src="/assets/img/iconwtf.jpg" alt="My icon" className="w-64 h-64 mt-12 bg-gray-800" style={{ borderRadius: "50%" }} />
                 <h1 className="Header">Danny</h1>
                 <h2 className="Tagline">Cybersecurity analyst, software engineer, communications</h2>
                 <div className="flex gap-x-6">

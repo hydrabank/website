@@ -10,22 +10,6 @@ export default function Projects() {
                 <h2 className="Tagline">A few projects and small software utilities of mine. Some are big, some are small.</h2>
                 <div className="py-6 px-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
                     <ProjectCard>
-                        <ProjectCard.Title>Hydrabank / Hydralink</ProjectCard.Title>
-
-                        <ProjectCard.Description>
-                            Systems administration, high-quality web design, and development. You can hire me for a project here!
-                        </ProjectCard.Description>
-
-                        <ProjectCard.Link>https://dannington.systems</ProjectCard.Link>
-
-                        <ProjectCard.Image>/assets/img/icon2.gif</ProjectCard.Image>
-
-                        <ProjectCard.ImageDescription>DanningtonSystems logo</ProjectCard.ImageDescription>
-                        
-                        <ProjectCard.ButtonText>Website</ProjectCard.ButtonText>
-                    </ProjectCard>
-                    
-                    <ProjectCard>
                         <ProjectCard.Title>Songfish</ProjectCard.Title>
 
                         <ProjectCard.Description>
@@ -38,7 +22,23 @@ export default function Projects() {
 
                         <ProjectCard.ImageDescription>Songfish</ProjectCard.ImageDescription>
                         
-                        <ProjectCard.ButtonText>Learn More</ProjectCard.ButtonText>
+                        <ProjectCard.ButtonText>Repository</ProjectCard.ButtonText>
+                    </ProjectCard>
+
+                    <ProjectCard>
+                        <ProjectCard.Title>Exchange Rate Wrapper (Node.js)</ProjectCard.Title>
+
+                        <ProjectCard.Description>
+                            An exchange rate API using data from Forex, via <a className="text-blue-300" rel="noreferrer noopener" target="_blank" href="https://exchangerate.host">exchangerate.host</a>.
+                        </ProjectCard.Description>
+
+                        <ProjectCard.Link>https://github.com/Dannnington/node-exchangerate</ProjectCard.Link>
+
+                        <ProjectCard.Image>/assets/img/icon2.gif</ProjectCard.Image>
+
+                        <ProjectCard.ImageDescription>?</ProjectCard.ImageDescription>
+                        
+                        <ProjectCard.ButtonText>Repository</ProjectCard.ButtonText>
                     </ProjectCard>
 
                     <ProjectCard>
@@ -77,7 +77,7 @@ export default function Projects() {
                         <ProjectCard.Title>Nexus</ProjectCard.Title>
 
                         <ProjectCard.Description>
-                            A website-blog-forum solution thing. It's kind of like WordPress, but powered by Node instead of PHP, I suppose? The frontend is open source at the moment, with the backend coming later.
+                            A CMS solution for blogs and Minecraft servers. Partially incomplete.
                         </ProjectCard.Description>
 
                         <ProjectCard.Link>https://github.com/Dannnington/Fission</ProjectCard.Link>

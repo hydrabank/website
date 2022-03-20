@@ -13,8 +13,8 @@ import { FlagIcon } from "react-flag-kit";
 
 const navigation = [
   { name: 'Home', href: '/', current: false },
-  { name: 'Professional', href: '/credentials', current: false, disabled: false, external: false },
   { name: 'Projects', href: '/projects', current: false, disabled: false },
+  { name: 'Professional', href: '/credentials', current: false, disabled: false, external: false },
 ];
 
 function classNames(...classes) {
