@@ -10,10 +10,6 @@
     vertical-align: -0.1em;
 }
 
-body {
-    @apply bg-gray-900;
-}
-
 :root {
     color-scheme: dark;
 }
