@@ -51,7 +51,7 @@ export default function Nav() {
       {/* START EVENT BANNER */}
         <div className="flex flex-row py-5 px-5 items-center justify-center text-white" style={{ background: "#00356f" }}>
           <div className="px-5">
-            <FlagIcon code="UA" className="rounded-md" size={64} />
+            <FlagIcon code="UA" className="rounded-md w-48 sm:w-20" />
           </div>
           <h1 className="font-BreezeHeader font-bold text-lg sm:text-2xl">Stand in solidarity with the Ukrainian people. #SlavaUkraini.</h1>
           <div className="px-6 flex flex-row">
