@@ -15,6 +15,7 @@ const navigation = [
   { name: 'Home', href: '/', current: false },
   { name: 'Projects', href: '/projects', current: false, disabled: false },
   { name: 'Professional', href: '/credentials', current: false, disabled: false, external: false },
+  { name: '#SaveUkraine *COMING SOON*', href: '/ukraine', current: false, disabled: true, external: false },
 ];
 
 function classNames(...classes) {
@@ -92,14 +93,14 @@ export default function Nav() {
                           {navigation.map((item) => (
                             <a
                               key={item.name}
-                              href={item.disabled ? route.pathname : item.href}
+                              href={item.disabled ? "#disabled" : item.href}
                               rel="noreferrer noopener"
                               target={item.external ? "_blank" : null}
                               className={classNames(
-                                item.current ? 'bg-gray-700 text-white' : 'text-gray-300 hover:bg-gray-900 hover:text-white',
+                                (item.href === route.pathname) ? 'bg-gray-600 text-white' : `text-gray-300 ${(route.pathname === "/credentials") ? "hover:bg-gray-800" : "hover:bg-gray-900"} hover:text-white`,
                                 'px-3 py-2 rounded-md text-sm font-medium font-BreezeText'
                               )}
-                              style={item.disabled ? { cursor: "not-allowed", textDecoration: "line-through" } : {}}
+                              style={item.disabled ? { cursor: "not-allowed", color: "#78909c" } : {}}
                               aria-current={item.current ? 'page' : undefined}
                             >
                               {item.name}
