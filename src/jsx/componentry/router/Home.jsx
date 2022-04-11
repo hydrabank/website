@@ -67,7 +67,7 @@ export default function Home() {
                         </a>
                     </Tooltip>
                     <Tooltip title={<span className="font-BreezeText font-thin text-sm">Danny is <b>{discordString}</b></span>} placement="top">
-                        <a target="_blank" rel="noreferrer noopener" href="https://discords.com/bio/p/dannington">
+                        <a target="_blank" rel="noreferrer noopener" href="https://discord.com/users/181944866987704320">
                             <FontAwesomeIcon size="2x" icon={faDiscord} style={discordStyle} />
                         </a>
                     </Tooltip>

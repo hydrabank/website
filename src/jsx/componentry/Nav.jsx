@@ -15,7 +15,7 @@ const navigation = [
   { name: 'Home', href: '/', current: false },
   { name: 'Projects', href: '/projects', current: false, disabled: false },
   { name: 'Professional', href: '/credentials', current: false, disabled: false, external: false },
-  { name: '#SaveUkraine *COMING SOON*', href: '/ukraine', current: false, disabled: true, external: false },
+  // { name: '#SaveUkraine *COMING SOON*', href: '/ukraine', current: false, disabled: true, external: false },
 ];
 
 function classNames(...classes) {
@@ -54,7 +54,7 @@ export default function Nav() {
           <div className="px-5">
             <FlagIcon code="UA" className="rounded-md w-48 sm:w-20" />
           </div>
-          <h1 className="font-BreezeHeader font-bold text-lg sm:text-2xl">Stand in solidarity with the Ukrainian people. #SlavaUkraini.</h1>
+          <h1 className="font-BreezeHeader font-bold text-lg sm:text-2xl">Help fight against the ongoing Russian crisis in Ukraine.</h1>
           <div className="px-6 flex flex-row">
             <a target="_blank" rel="noreferrer noopener" type="button" className="font-BreezeText inline-block px-6 py-2.5 text-black font-bold text-xs leading-tight uppercase rounded shadow-md hover:bg-cyan-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-cyan-700 active:shadow-lg transition duration-150 ease-in-out" style={{ background: "linear-gradient(110deg, #ffd600 65%, #b29500 60%)" }} href="https://www.paypal.com/fundraiser/117811171978246391">Donate<FontAwesomeIcon className="ml-2 hidden lg:inline" icon={faExternalLinkAlt} /></a>
           </div>
