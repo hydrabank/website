@@ -1,6 +1,6 @@
-# danny.works v9
+# danny.works v10
 
-Version 9 of [danny.works](https://www.danny.works). Created with React and Tailwind, based on create-react-app.
+Version 10 of [danny.works](https://www.danny.works). Created with React and Tailwind, based on create-react-app.
 
 ### How to run this project
 Simply `yarn start` and React's compiler will do all of its' auto-compilation magic for you! It will automatically open a page in your browser to `localhost:3000` and will automatically compile your code on file save.
