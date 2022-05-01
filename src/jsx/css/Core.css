@@ -27,25 +27,34 @@
 }
 
 .Body {
-  z-index: ;
   @apply h-screen;
 }
 
 .BodyColour {
-  @apply bg-gray-900;
+  @apply bg-gray-800;
 }
 
-.PageBanner {
-  @apply font-extrabold text-5xl py-4 font-BreezeHeader px-12 bg-clip-text text-white text-center;
+.PageBannerTitle {
+  @apply font-extrabold text-3xl md:text-5xl lg:text-6xl py-4 font-BreezeHeader px-12 md:px-36 bg-clip-text text-center md:text-left hidden sm:inline-block;
+}
+
+.PageBannerText {
+  @apply font-medium text-2xl lg:text-4xl py-2 font-BreezeMono px-12 md:px-36 bg-clip-text inline-block text-center md:text-left;
 }
 
 .PageBannerPhoto {
-  @apply h-80 bg-center flex items-center;
+  @apply h-48 sm:h-64 md:h-80 lg:h-[74vh] bg-center flex items-center;
+}
+
+.homeVideoPlayer {
+  object-fit: cover;
+  object-position: center;
+  overflow: hidden;
 }
 
 .HoverText {
-  background-size:cover;
-  position:absolute;
+  background-size: cover;
+  position: absolute;
   display: inline-block;
   z-index: -1;
 }

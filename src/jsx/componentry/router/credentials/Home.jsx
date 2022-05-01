@@ -17,8 +17,6 @@ export default function Resume() {
                         <ProjectCard.Description>
                             Danny is a student currently pursuing a career in journalism, with cybersecurity and software engineering in the sidelines. He finds passion in discovering vulnerabilities in software, along with designing and building web applications using technologies like Tailwind and React.
                         </ProjectCard.Description>
-
-                        <ProjectCard.CredentialTheme />
                     </ProjectCard>
                     <ProjectCard>
                         <ProjectCard.Title>What Danny does</ProjectCard.Title>
@@ -29,8 +27,6 @@ export default function Resume() {
                             <br /> <br />
                             While he mostly freelances with one-time clients, he is also contracted by various businesses and other customers on a regular basis for larger projects and continued tasks from previous contracts.
                         </ProjectCard.Description>
-
-                        <ProjectCard.CredentialTheme />
                     </ProjectCard>
                     <ProjectCard>
                         <ProjectCard.Title>Danny's experience</ProjectCard.Title>
@@ -42,8 +38,6 @@ export default function Resume() {
 
                         <ProjectCard.Link>/Experience.pdf</ProjectCard.Link>
                         <ProjectCard.ButtonText>experience and history</ProjectCard.ButtonText>
-
-                        <ProjectCard.CredentialTheme />
                     </ProjectCard>
                     <ProjectCard>
                         <ProjectCard.Title>Hire Danny</ProjectCard.Title>

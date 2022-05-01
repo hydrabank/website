@@ -5,8 +5,13 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        "BreezeHeader": ["Red Hat Display"],
-        "BreezeText": ["Readex Pro"]
+        "BreezeHeader": ["Inter"],
+        "BreezeText": ["Inter"],
+        "BreezeMono": ["Space Mono"],
+        "BreezeAltHeader": ["Red Hat Display"]
+      },
+      colors: {
+        "hydra-darkblue": "#204469"
       }
     },
   },
