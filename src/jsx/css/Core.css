@@ -7,7 +7,7 @@
 }
 
 .Tagline {
-  @apply text-white text-2xl font-BreezeText px-12 italic text-center;
+  @apply text-white text-base font-BreezeText px-12 text-center;
 }
 
 .ResumeHeader {
@@ -43,7 +43,7 @@
 }
 
 .PageBannerPhoto {
-  @apply h-48 sm:h-64 md:h-80 lg:h-[74vh] bg-center flex items-center;
+  @apply h-48 sm:h-64 md:h-80 lg:h-[94vh] bg-center flex items-center;
 }
 
 .homeVideoPlayer {

@@ -11,7 +11,6 @@ import { faGithub } from '@fortawesome/free-brands-svg-icons';
 const navigation = [
   { name: 'Home', href: '/', current: false },
   { name: 'Services', href: '/services', current: false, disabled: false },
-  { name: 'Professional', href: '/credentials', current: false, disabled: false, external: false },
 ];
 
 function classNames(...classes) {
@@ -88,7 +87,7 @@ export default function Nav() {
                     target="_blank"
                     id="githubButton"
                     rel="noreferrer noopener"
-                    href="https://github.com/Dannnington/website"
+                    href="https://github.com/hydrabank"
                     className=" p-1 rounded-full text-white hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white"
                   >
                   <FontAwesomeIcon icon={faGithub} size="xl" />

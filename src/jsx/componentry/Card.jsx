@@ -71,7 +71,7 @@ function ProjectCard(props) {
         });
         
     return (
-        <div>
+        <div id={props.id}>
             <div className="flex justify-center items-start rounded-lg">
                 <div className={`shadow-xl rounded-3xl bg-gray-300 max-w-sm`}>
                     <div className="p-6">
@@ -82,7 +82,7 @@ function ProjectCard(props) {
                         
                         <div className="flex flex-row justify-center text-center">
                             { link !== "" ? (
-                                <a target={link.startsWith("/") ? null : "_blank"} rel="noreferrer noopener" type="button" className="font-BreezeText inline-block px-6 py-2.5 bg-cyan-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-cyan-700 hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:bg-cyan-700 active:shadow-lg transition duration-150 ease-in-out" href={link}>{buttonText} <FontAwesomeIcon className="ml-2" icon={faExternalLinkAlt} /></a>
+                                <a target={link.startsWith("/") ? null : "_blank"} rel="noreferrer noopener" type="button" className="font-BreezeText inline-block px-6 py-2.5 bg-blue-300 text-gray-800 font-bold text-xs leading-tight uppercase rounded-full shadow-md hover:bg-blue-400 hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-400 active:shadow-lg transition duration-150 ease-in-out" href={link}>{buttonText} <FontAwesomeIcon className="ml-2" icon={faExternalLinkAlt} /></a>
                             ) : null }
                         </div>
                     </div>

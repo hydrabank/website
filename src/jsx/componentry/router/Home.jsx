@@ -1,6 +1,9 @@
+import { faArrowAltCircleDown, faClipboardCheck, faClock, faExternalLinkAlt, faHandshakeAngle } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import ReactTypingEffect from "react-typing-effect";
-import { useEffect, useRef, useState } from "react";
-import { ProjectCard } from "../Card.jsx";
+import ImageFadeIn from "react-image-fade-in";
+import { Fade } from "react-awesome-reveal";
+import { Tooltip } from "@mui/material";
 
 const BannerStrings = [
     "portfolio",
@@ -14,103 +17,99 @@ const BannerStrings = [
     "website"
 ].sort(() => Math.random() - 0.5);
 
-const VideoLinks = [
-    "whiteboard_write.mp4",
-    "laptop_coding.mp4",
-    "doodle.mp4"
-];
-
 export default function Home() {
-    const videoRef = useRef();
-    const [playbackRate] = useState(0.75);
-    const [videoFile] = useState(VideoLinks[Math.floor(Math.random() * VideoLinks.length)]);
-
-    useEffect(() => {
-        videoRef.current.playbackRate = playbackRate;
-        
-        if (videoFile === "whiteboard_write.mp4") {
-            document.getElementById("githubButton").classList.add("md:text-black");
-
-            const links = document.querySelectorAll('.NavLink');
-            links.forEach(link => {
-                link.classList.add("md:text-gray-800");
-                link.classList.add("hover:md:font-bold");
-                link.classList.add("hover:md:text-black");
-            });
-        };
-    }, [playbackRate, videoFile]);
     return (
         <div className="py-6">
             <div className="PageBannerPhoto" style={{ zIndex: "0" }}>
                 <div className="flex items-center">
-                    <video ref={videoRef} src={`/assets/mp4/${videoFile}`} autoPlay={true} muted={true} loop={true} style={{ zIndex: "-1", position: "absolute" }} className="homeVideoPlayer hidden md:block" />
+                        <ImageFadeIn alt="background" src="/assets/img/startup-photo.jpg" className="absolute blur-sm hidden md:block brightness-50" style={{ zIndex: "-1" }} opacityTransition="2" />
                 </div>
                 <div className="flex flex-col">
-                    <h1 className={`PageBannerTitle ${videoFile === "whiteboard_write.mp4" ? "md:text-black" : "text-white"}`} id="PageBannerTitle" style={{ zIndex: "1" }}>
-                        We can help you <span className={`${videoFile === "whiteboard_write.mp4" ? "text-blue-800" : "text-blue-200"}`}>turn your idea into reality</span>.
-                    </h1>
-                    <h2 className={`PageBannerText  ${videoFile === "whiteboard_write.mp4" ? "md:text-black" : "text-white"}`} id="PageBannerText" style={{ zIndex: "1" }}>
-                        Build your dream {" "}
-                        <b>
-                            <span className={`text-cyan-500`}>
-                                <ReactTypingEffect speed="100" eraseSpeed="50" typingDelay="500" eraseDelay="2500" text={BannerStrings} cursor={"_"} />
-                            </span>
-                        </b>
-                        {" "}
-                        with us.
-                    </h2>
+                    <Fade delay="100" triggerOnce>
+                        <h1 className={`PageBannerTitle text-white`} id="PageBannerTitle" style={{ zIndex: "1" }}>
+                            We can help you turn your idea into a <span className={`text-green-400 md:text-green-300`}>reality</span>.
+                        </h1>
+                        <h2 className={`PageBannerText text-white`} id="PageBannerText" style={{ zIndex: "1" }}>
+                            Design and build your dream {" "}
+                            <b>
+                                <span className="text-blue-400 md:text-blue-300">
+                                    <ReactTypingEffect speed="100" eraseSpeed="50" typingDelay="500" eraseDelay="2500" text={BannerStrings} cursor={"_"} />
+                                </span>
+                            </b>
+                            {" "}
+                            with us.
+                        </h2>
+                        <div className="pt-4 px-12 md:px-36 bg-clip-text text-center md:text-left hidden lg:inline-block font-BreezeHeader">
+                            <a href="/services" className="font-BreezeText inline-block px-4 py-2 bg-blue-300 text-gray-800 font-bold text-xs leading-tight uppercase rounded-full shadow-md hover:bg-blue-400 hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-400 active:shadow-lg transition duration-150 ease-in-out">
+                                Our services
+                                <FontAwesomeIcon className="ml-2" icon={faExternalLinkAlt} />
+                            </a>
+                        </div>
+                    </Fade>
                 </div>
             </div>
-            {/*gap-y-6 py-12*/}
-            <div className="flex flex-col md:flex-row justify-center gap-x-2 gap-y-12 md:gap-y-0 px-4 md:gap-x-6 lg:gap-x-12 my-0 md:-my-8">
-                <ProjectCard>
-                    <ProjectCard.Title>Web Design and Development</ProjectCard.Title>
-                    <ProjectCard.Image>/assets/img/hydrabank.png</ProjectCard.Image>
-                    <ProjectCard.Size>384</ProjectCard.Size>
-                    <ProjectCard.Description>
-                        Have an idea or pre-existing design? Show us the idea and we can help you turn it into the perfect website for you. 
-                        Let us take care of all of your needs and adapt to your project or business's design language.
-                        <br /><br />
-                        With tonnes of experience in web design and development, we're prepared to help you turn your next project into a reality 
-                        with the right tools. 
-
-                        <b> We'll handle the website so that you can better focus on taking care of your customers. </b>
-                    </ProjectCard.Description>
-
-                    <ProjectCard.ImageDescription>Hydralink</ProjectCard.ImageDescription>
-
-                    <ProjectCard.Link>/services</ProjectCard.Link>
-                    <ProjectCard.ButtonText>Pricing & Services</ProjectCard.ButtonText>
-                </ProjectCard>
-
-                <ProjectCard>
-                    <ProjectCard.Title>Backend Development</ProjectCard.Title>
-                    <ProjectCard.Description>
-                        Already have a beautifully-looking website, but need to add more things that just can't be done on the client side? No problem.
-                        We can help you create a robust backend for your website, application, or anything else that you need. We can help you build 
-                        integrated backend solutions, portable and versatile APIs, adapters for third-party services, and more. 
-                    </ProjectCard.Description>
-                </ProjectCard>
-
-                <ProjectCard>
-                    <ProjectCard.Title>Infrastructure Management</ProjectCard.Title>
-                    <ProjectCard.Image>/assets/img/hydralink.png</ProjectCard.Image>
-                    <ProjectCard.Size>384</ProjectCard.Size>
-                    <ProjectCard.Description>
-                        If you're looking for infrastructure management or systems administration, we're also well-equipped to handle your needs.
-                        <br /><br />
-                        With years of experience in developing, deploying, and maintaining large-scale <b>Linux</b>, <b>BSD</b>, and other UNIX-based
-                        infrastructure, we can help you find (or provide you with) the best solutions for your needs.
-
-                        <br/> <br />
-                        <b>Coming soon.</b>
-                    </ProjectCard.Description>
-
-                    <ProjectCard.ImageDescription>Hydralink</ProjectCard.ImageDescription>
-                </ProjectCard>
+            <div className="flex flex-col justify-center items-center">
+                <FontAwesomeIcon icon={faArrowAltCircleDown} size="3x" className="my-4 hidden lg:inline-block invisible" />
             </div>
-            <div className="flex flex-col h-screen items-center px-6 -my-8 bg-gray-800">
-                
+            <div className="flex flex-col h-screen items-center px-6 py-8 bg-gray-900">
+                <h1 className="Header pb-8">Why Hydrabank?</h1>
+                <div className="flex flex-col gap-x-32 gap-y-12">
+                        <div className="flex flex-row gap-x-12 justify-center">
+                            <FontAwesomeIcon icon={faHandshakeAngle} size="6x" />
+                            <div className="flex flex-col gap-y-2">
+                                <h1 className="font-BreezeHeader text-2xl font-bold text-left">Quality. <b className="text-blue-300">Assured.</b></h1>
+                                <p className="font-BreezeText text-xl font-medium text-left ">We will <b>always</b> check in with you to ensure that you like what we've made. Don't like something? Let us<br/> know and we'll adjust.</p>
+                            </div>
+                        </div>
+
+                        <hr />
+                        
+                        <div className="flex flex-row gap-x-12 justify-center">
+                            <div className="flex flex-col gap-y-2">
+                                <h1 className="font-BreezeHeader text-2xl font-bold text-right">Name a price. We've got you <b className="text-blue-300">covered</b>.</h1>
+                                <p className="font-BreezeText text-xl font-medium text-right ">With flexible yet affordable pricing, we can adjust based on your budget. <b>All with the same guaranteed <br/>quality.</b></p>
+                            </div>
+                            <FontAwesomeIcon icon={faClipboardCheck} size="6x" />
+                        </div>
+                        
+                        <hr />
+                        
+                        <div className="flex flex-row gap-x-12 justify-center">
+                            <FontAwesomeIcon icon={faClock} size="6x" />
+                            <div className="flex flex-col gap-y-2 flex-wrap">
+                                <h1 className="font-BreezeHeader font-bold text-2xl text-left">We can do it. <b className="text-blue-300">Fast</b>.</h1>
+                                <p className="font-BreezeText text-xl font-medium text-left">
+                                    Depending on the size of your request, we can take anywhere 
+                                    between a <b className="text-blue-200">few hours</b> for the smallest requests to<br/>
+                                    <Tooltip title={<span className="font-BreezeText">For longer requests, we may take longer in order to ensure that our work fits your standards.</span>}>
+                                        <span className="decoration-dotted underline text-blue-200">
+                                            <b>a week</b> for advanced requests
+                                        </span>
+                                    </Tooltip>
+                                    .</p>
+                            </div>
+                        </div>
+                </div>
+
+                <div className="flex flex-col py-20 text-center">
+                    <h1 className="text-white font-bold text-3xl font-BreezeHeader px-5">So, what are you waiting for?</h1>
+                    <h2 className="text-white font-medium text-2xl font-BreezeHeader px-5 pt-2 pb-4">
+                        Let us help you build your <b>dream</b>
+                        {" "}
+                        <span className="text-blue-400 md:text-blue-300 font-BreezeMono">
+                            <ReactTypingEffect speed="100" eraseSpeed="50" typingDelay="500" eraseDelay="2500" text={BannerStrings} cursor={" "} />
+                        </span>
+                        {" "} 
+                        for your project.
+                    </h2>
+
+                    <div>
+                        <a type="button" className="font-BreezeText inline-block px-6 py-2.5 bg-blue-300 text-gray-800 font-bold text-xs leading-tight uppercase rounded-full shadow-md hover:bg-blue-400 hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-400 active:shadow-lg transition duration-150 ease-in-out" href="/services">
+                            Pricing & Information
+                            <FontAwesomeIcon className="ml-2" icon={faExternalLinkAlt} />
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
     );
