@@ -110,7 +110,7 @@ export default function Services() {
                 </table>
             </div>
             <div className="flex flex-col justify-center items-center">
-                <h2 className="text-white font-medium text-2xl font-BreezeHeader px-5 pt-2 pb-4">
+                <h2 className="text-white font-medium text-2xl font-BreezeHeader px-5 pt-2 pb-4 text-center">
                     Ready to build your <b>dream</b>
                     {" "}
                     <span className="text-blue-400 md:text-blue-300 font-BreezeMono">
@@ -120,7 +120,7 @@ export default function Services() {
                 </h2>
 
                 <div>
-                    <a type="button" target="_blank" rel="noreferrer noopener" className="font-BreezeText inline-block px-6 py-2.5 bg-blue-300 text-gray-800 font-bold text-xs leading-tight uppercase rounded-full shadow-md hover:bg-blue-400 hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-400 active:shadow-lg transition duration-150 ease-in-out" href="mailto:hello@danny.works">
+                    <a type="button" target="_blank" rel="noreferrer noopener" className="font-BreezeText inline-block px-6 py-2.5 bg-blue-300 text-gray-800 font-bold text-xs leading-tight uppercase rounded-full shadow-md hover:bg-blue-400 hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-400 active:shadow-lg transition duration-150 ease-in-out mb-6" href="mailto:hello@danny.works">
                         Contact us
                         <FontAwesomeIcon className="ml-2" icon={faExternalLinkAlt} />
                     </a>

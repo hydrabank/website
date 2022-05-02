@@ -92,7 +92,7 @@ export default function Home() {
 
                 <div className="flex flex-col py-20 text-center">
                     <h1 className="text-white font-bold text-3xl font-BreezeHeader px-5">So, what are you waiting for?</h1>
-                    <h2 className="text-white font-medium text-2xl font-BreezeHeader px-5 pt-2 pb-4">
+                    <h2 className="text-white font-medium text-2xl font-BreezeHeader px-5 pt-2 pb-4 text-center">
                         Let us help you build your <b>dream</b>
                         {" "}
                         <span className="text-blue-400 md:text-blue-300 font-BreezeMono">
