@@ -1,7 +1,6 @@
 import { faArrowAltCircleDown, faClipboardCheck, faClock, faExternalLinkAlt, faHandshakeAngle } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import ReactTypingEffect from "react-typing-effect";
-import ImageFadeIn from "react-image-fade-in";
 import { Fade } from "react-awesome-reveal";
 import { Tooltip } from "@mui/material";
 
@@ -22,7 +21,7 @@ export default function Home() {
         <div className="py-6">
             <div className="PageBannerPhoto" style={{ zIndex: "0" }}>
                 <div className="flex items-center">
-                        <ImageFadeIn alt="background" src="/assets/img/startup-photo.jpg" className="absolute blur-sm hidden md:block brightness-50" style={{ zIndex: "-1" }} opacityTransition="2" />
+                        <img alt="background" src="/assets/img/startup-photo.jpg" className="absolute blur-sm hidden md:block brightness-50" style={{ zIndex: "-1" }} />
                 </div>
                 <div className="flex flex-col">
                     <Fade delay="100" triggerOnce>
