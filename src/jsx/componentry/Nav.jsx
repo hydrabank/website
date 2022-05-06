@@ -6,7 +6,8 @@ import { useLocation } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import ConfigurationFetch from "../../lib/ConfigurationFetch.js";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGithub } from '@fortawesome/free-brands-svg-icons';
+import { faGlobe } from '@fortawesome/free-solid-svg-icons';
+import { Tooltip } from '@mui/material';
 
 const navigation = [
   { name: 'Home', href: '/', current: false },
@@ -82,16 +83,17 @@ export default function Nav() {
                   </div>
                   
                 <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-                  <a
-                    type="button"
-                    target="_blank"
-                    id="githubButton"
-                    rel="noreferrer noopener"
-                    href="https://github.com/hydrabank"
-                    className=" p-1 rounded-full text-white hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white"
-                  >
-                  <FontAwesomeIcon icon={faGithub} size="xl" />
-                  </a>
+                  <Tooltip title={<span className="font-BreezeText font-bold">Hydralink Status</span>}>
+                    <a
+                      type="button"
+                      target="_blank"
+                      rel="noreferrer noopener"
+                      href="https://status.hydrabank.systems"
+                      className=" p-1 rounded-full text-white hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white"
+                    >
+                      <FontAwesomeIcon icon={faGlobe} size="xl" />
+                    </a>
+                  </Tooltip>
                 </div>
               </div>
             </div>
