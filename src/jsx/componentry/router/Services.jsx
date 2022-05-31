@@ -61,7 +61,7 @@ export default function Services() {
                             With years of experience in developing, deploying, and maintaining large-scale <b>Linux</b>, <b>BSD</b>, and other UNIX-based
                             infrastructure, we can help you find (or provide you with) the best solutions for your needs.
                             <br /><br />
-                            Looking for bulk sale, managed solutions, or other custom accomodations? Contact <a href="mailto:link@hydrabank.systems" className="text-blue-600 font-bold">the Hydrabank team</a> so we can find the best custom solution for you.
+                            Looking for bulk sale, managed solutions, or other custom accomodations? Contact <a href="mailto:link@hydrabank.systems" className="text-blue-600 font-bold">the Hydralink team</a> so we can find the best custom solution for you.
                         </ProjectCard.Description>
 
                         <ProjectCard.ImageDescription>Hydralink</ProjectCard.ImageDescription>
