@@ -25,6 +25,8 @@ export default function Services() {
                         <ProjectCard.Title>Web Design and Development</ProjectCard.Title>
                         <ProjectCard.Image>/assets/img/hydrabank.png</ProjectCard.Image>
                         <ProjectCard.Size>384</ProjectCard.Size>
+                        <ProjectCard.ButtonText>Talk to our resident designer</ProjectCard.ButtonText>
+                        <ProjectCard.Link>mailto:hello@danny.works</ProjectCard.Link>
                         <ProjectCard.Description>
                             Have an idea or pre-existing design? Show us the idea and we can help you turn it into the perfect website for you. 
                             Let us take care of all of your needs and adapt to your project or business's design language.
@@ -51,14 +53,15 @@ export default function Services() {
                         <ProjectCard.Title>Infrastructure Management</ProjectCard.Title>
                         <ProjectCard.Image>/assets/img/hydralink.png</ProjectCard.Image>
                         <ProjectCard.Size>384</ProjectCard.Size>
+                        <ProjectCard.ButtonText>Contact sales</ProjectCard.ButtonText>
+                        <ProjectCard.Link>/services#contactUs</ProjectCard.Link>
                         <ProjectCard.Description>
                             If you're looking for infrastructure management or systems administration, we're also well-equipped to handle your needs.
                             <br /><br />
                             With years of experience in developing, deploying, and maintaining large-scale <b>Linux</b>, <b>BSD</b>, and other UNIX-based
                             infrastructure, we can help you find (or provide you with) the best solutions for your needs.
-
-                            <br/> <br />
-                            <b>Coming soon.</b>
+                            <br /><br />
+                            Looking for bulk sale, managed solutions, or other custom accomodations? Contact <a href="mailto:link@hydrabank.systems" className="text-blue-600 font-bold">the Hydrabank team</a> so we can find the best custom solution for you.
                         </ProjectCard.Description>
 
                         <ProjectCard.ImageDescription>Hydralink</ProjectCard.ImageDescription>
@@ -120,8 +123,8 @@ export default function Services() {
                 </h2>
 
                 <div>
-                    <a type="button" target="_blank" rel="noreferrer noopener" className="font-BreezeText inline-block px-6 py-2.5 bg-blue-300 text-gray-800 font-bold text-xs leading-tight uppercase rounded-full shadow-md hover:bg-blue-400 hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-400 active:shadow-lg transition duration-150 ease-in-out mb-6" href="mailto:hello@danny.works">
-                        Contact us
+                    <a type="button" target="_blank" id="contactUs" rel="noreferrer noopener" className="font-BreezeText inline-block px-6 py-2.5 bg-blue-300 text-gray-800 font-bold text-xs leading-tight uppercase rounded-full shadow-md hover:bg-blue-400 hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-400 active:shadow-lg transition duration-150 ease-in-out mb-6" href="mailto:sales@hydrabank.systems">
+                        Contact Sales
                         <FontAwesomeIcon className="ml-2" icon={faExternalLinkAlt} />
                     </a>
                 </div>

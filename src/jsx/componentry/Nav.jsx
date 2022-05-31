@@ -6,12 +6,13 @@ import { useLocation } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import ConfigurationFetch from "../../lib/ConfigurationFetch.js";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGlobe } from '@fortawesome/free-solid-svg-icons';
+import { faExternalLink, faGlobe } from '@fortawesome/free-solid-svg-icons';
 import { Tooltip } from '@mui/material';
 
 const navigation = [
-  { name: 'Home', href: '/', current: false },
+  { name: 'Home', href: '/', current: false, external: false },
   { name: 'Services', href: '/services', current: false, disabled: false },
+  { name: 'Dedicated Manager', href: "https://dsm.hydrabank.systems", current: false, external: true, disabled: false },
 ];
 
 function classNames(...classes) {
@@ -76,6 +77,7 @@ export default function Nav() {
                               aria-current={item.current ? 'page' : undefined}
                             >
                               {item.name}
+                              {item.external && <FontAwesomeIcon icon={faExternalLink} className="ml-2" />}
                             </a>
                           ))}
                         </div>
@@ -116,6 +118,7 @@ export default function Nav() {
                     aria-current={item.current ? 'page' : undefined}
                   >
                     {item.name}
+                    {item.external && <FontAwesomeIcon icon={faExternalLink} className="ml-2" />}
                   </Disclosure.Button>
                 ))}
               </div>
