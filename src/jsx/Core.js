@@ -46,7 +46,7 @@ function App() {
                   </a>
                 </Tooltip>
                 <Tooltip title={<span className="font-BreezeText font-bold text-red-300">Hydralink GitHub</span>}>
-                  <a href="https://github.com/hydralink" rel="noreferrer noopener" target="_blank">
+                  <a href="https://github.com/DanningtonSystems" rel="noreferrer noopener" target="_blank">
                     <FontAwesomeIcon icon={faGithub} className="text-red-400" size="xl" />
                   </a>
                 </Tooltip>
