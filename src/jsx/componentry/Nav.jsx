@@ -15,6 +15,7 @@ const navigation = [
   { name: 'Dedicated Manager', href: "https://dsm.hydrabank.systems", current: false, external: true, disabled: false },
   { name: 'Help Portal', href: "https://help.hydrabank.systems", current: false, external: true, disabled: false },
   { name: 'Order Portal', href: "https://order.hydrabank.systems", current: false, external: true, disabled: false },
+  { name: 'Looking Glass', href: "https://lg.hydrabank.world", current: false, external: true, disabled: false },
 ];
 
 function classNames(...classes) {
