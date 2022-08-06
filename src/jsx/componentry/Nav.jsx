@@ -12,9 +12,7 @@ import { Tooltip } from '@mui/material';
 const navigation = [
   { name: 'Home', href: '/', current: false, external: false },
   { name: 'Services', href: '/services', current: false, disabled: false },
-  { name: 'Dedicated Manager', href: "https://dsm.hydrabank.systems", current: false, external: true, disabled: false },
-  { name: 'Help Portal', href: "https://help.hydrabank.systems", current: false, external: true, disabled: false },
-  { name: 'Order Portal', href: "https://order.hydrabank.systems", current: false, external: true, disabled: false },
+  { name: 'Hosting', href: "https://volteric.com/hydrabank", current: false, external: true, disabled: false },
 ];
 
 function classNames(...classes) {
