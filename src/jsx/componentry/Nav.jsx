@@ -11,8 +11,7 @@ import { Tooltip } from '@mui/material';
 
 const navigation = [
   { name: 'Home', href: '/', current: false, external: false },
-  { name: 'Services', href: '/services', current: false, disabled: false },
-  { name: 'Hosting', href: "https://volteric.com/hydrabank", current: false, external: true, disabled: false },
+  { name: 'Services', href: '/services', current: false, disabled: false }
 ];
 
 function classNames(...classes) {
