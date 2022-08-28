@@ -12,7 +12,7 @@ import { Tooltip } from '@mui/material';
 const navigation = [
   { name: 'Home', href: '/', current: false, external: false },
   { name: 'Services', href: '/services', current: false, disabled: false },
-  { name: 'Hosting', href: 'https://volteric.com', current: false, disabled: false }
+  { name: 'Hosting', href: 'https://volteric.com', current: false, disabled: false, external: true }
 ];
 
 function classNames(...classes) {
