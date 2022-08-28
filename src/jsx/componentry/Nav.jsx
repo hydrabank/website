@@ -11,7 +11,8 @@ import { Tooltip } from '@mui/material';
 
 const navigation = [
   { name: 'Home', href: '/', current: false, external: false },
-  { name: 'Services', href: '/services', current: false, disabled: false }
+  { name: 'Services', href: '/services', current: false, disabled: false },
+  { name: 'Exposé', href: 'https://cumsock.gay', current: false, disabled: true }
 ];
 
 function classNames(...classes) {
