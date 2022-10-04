@@ -11,8 +11,7 @@ import { Tooltip } from '@mui/material';
 
 const navigation = [
   { name: 'Home', href: '/', current: false, external: false },
-  { name: 'Services', href: '/services', current: false, disabled: false },
-  { name: 'Hosting', href: 'https://volteric.com', current: false, disabled: false, external: true }
+  { name: 'Services', href: '/services', current: false, disabled: false }
 ];
 
 function classNames(...classes) {
@@ -85,16 +84,18 @@ export default function Nav() {
                   </div>
                   
                 <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-                  <Tooltip title={<span className="font-BreezeText font-bold">Hydralink Status</span>}>
-                    <a
+                  <Tooltip title={<span className="font-BreezeText font-bold line-through text-red-300">Hydralink Status</span>}>
+                    <button
                       type="button"
                       target="_blank"
                       rel="noreferrer noopener"
                       href="https://status.hydrabank.systems"
-                      className=" p-1 rounded-full text-white hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white"
+                      aria-disabled={true}
+                      className="p-1 rounded-full text-white hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white"
+                      style={{ cursor: "not-allowed", color: "#78909c" }}
                     >
                       <FontAwesomeIcon icon={faGlobe} size="xl" />
-                    </a>
+                    </button>
                   </Tooltip>
                 </div>
               </div>
